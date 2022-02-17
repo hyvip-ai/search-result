@@ -23,7 +23,7 @@ import {
 } from "@hyvip-ai/search-input";
 ```
 
-#Before That
+# Before That
 
 ```javascript
 const searchInput = require("search-input");
@@ -108,16 +108,16 @@ import {
 let objectFilteredArray = getResultsObjectArraySomeFields(
   objectArray,
   searchData,
-  capital,
-  demonym
+  "capital",
+  "demonym"
 );
 //after calling the function it will return an array which you can use later to display
 //Highlight the search
 let objectFilteredHighlightArray = getHighlightedResultsObjectArraySomeFields(
   objectArray,
   searchData,
-  capital,
-  demonym
+  "capital",
+  "demonym"
 );
 //it will also return an array bu the only difference is the array element will contain some html tags so you need to set it as innerhtml
 ```

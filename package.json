@@ -1,6 +1,6 @@
 {
   "name": "@hyvip-ai/search-input",
-  "version": "0.0.0",
+  "version": "0.0.6",
   "description": "A simple library for search  data like a wizard",
   "main": "index.js",
   "scripts": {
@@ -11,12 +11,15 @@
     "url": "git+https://github.com/hyvip-ai/search-result.git"
   },
   "keywords": [
-    "search"
+    "search",
+    "search-result",
+    "javascript",
+    "highlight"
   ],
   "author": "hyvip-ai",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hyvip-ai/search-result/issues"
   },
-  "homepage": "https://github.com/hyvip-ai/search-result#readme"
+  "homepage": "https://github.com/hyvip-ai/search-result"
 }

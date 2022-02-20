@@ -127,23 +127,24 @@ let objectFilteredHighlightArray = getHighlightedResultsObjectArraySomeFields(
 ```javascript
 import {
   highlightSearchResultsFromStringArray,
-  useDebounce
+  useDebounce,
 } from "@hyvip-ai/search-input";
 
-  let answerArray = []; //array to store results
-  // useDebounce function takes two parameters first one is the main function and the second one is the duration between two key press, if two key is not pressed within that delay then only it will search other wise not.
-  let debouncedFunction = useDebounce(
-    highlightSearchResultsFromStringArray, //main function
-    1000 // delay in milliseconds
-  );
+let answerArray = []; //array to store results
+// useDebounce function takes two parameters first one is the main function and the second one is the duration between two key press, if two key is not pressed within that delay then only it will search other wise not.
+let debouncedFunction = useDebounce(
+  highlightSearchResultsFromStringArray, //main function
+  1000 // delay in milliseconds
+);
 
-  //now calling the function returned upon calling useDebounce with the same arguments as shown in previous example
-  //debouncedFunction returns an array which will only resolved upon getting some search value as far now there is no use of catch here but it may change in future.
-  debouncedFunction(stringArray, searchItem).then((data) => {
-    //storing the data
-    answerArray = data;
-  });
+//now calling the function returned upon calling useDebounce with the same arguments as shown in previous example
+//debouncedFunction returns an array which will only resolved upon getting some search value as far now there is no use of catch here but it may change in future.
+debouncedFunction(stringArray, searchItem).then((data) => {
+  //storing the data
+  answerArray = data;
+});
+```
+
 ---
 
 > This package is still under development and will be released with new and improved functions , if you find any problems whule using this or if you have any new ideas for integration please feel free to reach out @rm2932002@gmail.com or in [LinkedIn](https://www.linkedin.com/in/rajat-mondal-a7abb8199/)
-```

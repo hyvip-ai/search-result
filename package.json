@@ -1,6 +1,6 @@
 {
   "name": "@hyvip-ai/search-input",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple library for search  data like a wizard",
   "main": "index.js",
   "scripts": {

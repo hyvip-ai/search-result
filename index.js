@@ -95,6 +95,20 @@ function getHighlightedResultsObjectArraySomeFields(
   return filteredArray.length ? filteredArray : ["No Result Found"];
 }
 
+function useDebounce(mainFunc, delay) {
+  let timer;
+  return function (...args) {
+    return new Promise((resolve, reject) => {
+      console.log("Calling");
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        console.log("inside timeout function calling");
+        resolve(mainFunc(...args));
+      }, delay);
+    });
+  };
+}
+
 module.exports = {
   getSearchResultsFromStringArray,
   highlightSearchResultsFromStringArray,
@@ -102,4 +116,5 @@ module.exports = {
   getHighlightedResultsObjectArrayAllFields,
   getResultsObjectArraySomeFields,
   getHighlightedResultsObjectArraySomeFields,
+  useDebounce,
 };
